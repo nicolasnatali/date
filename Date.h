@@ -1,17 +1,11 @@
 #ifndef DATE_DATE_H
 #define DATE_DATE_H
 
-#include <array>
-#include <ostream>
-#include <string>
-
 class Date {
 public:
     Date();
 
     Date(unsigned int year, unsigned int month, unsigned int day);
-
-    virtual ~Date();
 
     void setDate(unsigned int y, unsigned int m, unsigned int d);
 
@@ -34,7 +28,7 @@ private:
     unsigned int month{1};
     unsigned int day{1};
 
-    static bool validDate(unsigned int year, unsigned int month, unsigned int day);
+    static bool isValid(unsigned int year, unsigned int month, unsigned int day);
 
     static std::string getMonthName(unsigned int month);
 };

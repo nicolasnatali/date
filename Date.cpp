@@ -1,13 +1,13 @@
+#include <array>
+#include <ostream>
 #include "Date.h"
 
 Date::Date() = default;
 
 Date::Date(unsigned int year, unsigned int month, unsigned int day) : year(year), month(month), day(day) {}
 
-Date::~Date() = default;
-
 void Date::setDate(unsigned int y, unsigned int m, unsigned int d) {
-    if (validDate(y, m, d)) {
+    if (isValid(y, m, d)) {
         setYear(y);
         setMonth(m);
         setDay(d);
@@ -43,7 +43,7 @@ std::ostream &operator<<(std::ostream &os, const Date &date) {
     return os;
 }
 
-bool Date::validDate(unsigned int year, unsigned int month, unsigned int day) {
+bool Date::isValid(unsigned int year, unsigned int month, unsigned int day) {
     if ((month < 1 || month > 12) || (day < 1 || day > 31)) {
         return false;
     } else if (month == 2) {
