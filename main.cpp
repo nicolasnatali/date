@@ -1,5 +1,6 @@
-#include <iostream>
 #include "Date.h"
+
+#include <iostream>
 
 int main() {
     Date d1;

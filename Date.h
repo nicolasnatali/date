@@ -1,6 +1,8 @@
 #ifndef DATE_DATE_H
 #define DATE_DATE_H
 
+#include <ostream>
+
 class Date {
 public:
     Date();

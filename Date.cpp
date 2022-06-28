@@ -1,6 +1,6 @@
-#include <array>
-#include <ostream>
 #include "Date.h"
+
+#include <array>
 
 Date::Date() = default;
 
